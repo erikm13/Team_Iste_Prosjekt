@@ -17,16 +17,16 @@ if(isset($_POST['email'])) {
     }
      
     // Validerer forventet eksisterende data
-    if(!isset($_POST['company_name']) ||
-        !isset($_POST['contact_name']) ||
+    if(!isset($_POST['first_name']) ||
+        !isset($_POST['last_name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['telephone']) ||
         !isset($_POST['comments'])) {
         died('Beklager, det var en feil i skjema du sendte inn.');       
     }
      
-    $first_name = $_POST['company_name']; // Påkrevd
-    $last_name = $_POST['contact_name']; // Påkrevd
+    $first_name = $_POST['first_name']; // Påkrevd
+    $last_name = $_POST['last_name']; // Påkrevd
     $email_from = $_POST['email']; // Påkrevd
     $telephone = $_POST['telephone']; // Ikke påkrevd
     $comments = $_POST['comments']; // påkrevd
@@ -37,11 +37,11 @@ if(isset($_POST['email'])) {
     $error_message .= 'E-post adresse er ugyldig.<br />';
   }
     $string_exp = "/^[A-Za-z .'-]+$/";
-  if(!preg_match($string_exp,$company_name)) {
+  if(!preg_match($string_exp,$first_name)) {
     $error_message .= 'Bedriftsnavnet er ugyldig.<br />';
   }
-  if(!preg_match($string_exp,$contact_name)) {
-    $error_message .= 'Kontakt personens navn er ugyldig.<br />';
+  if(!preg_match($string_exp,$last_name)) {
+    $error_message .= 'Kontaktpersonens navn er ugyldig.<br />';
   }
   if(strlen($comments) < 2) {
     $error_message .= 'Kommentaren din er ugyldig, du må ha mer enn 2 tegn.<br />';
