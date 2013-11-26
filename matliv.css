@@ -140,11 +140,11 @@ body {
 
 		width: 50%;
 		height: auto;
-		float:center ;
 		clear:both;
-		margin-left: auto;
 		margin-right: auto;
-}
+		padding-left:10px;
+		}
+
 
 #googleMap {
 float: right;
