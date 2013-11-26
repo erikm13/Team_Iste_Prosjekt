@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!--
+  Prosjekt
+  Navn: Team Iste
+  Rom: IS-107
+-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-1.8.1.js"></script>
+<script src="js/slideshow.js"></script>
+
+
+<title>Matliv i Kristiansand</title>
+<link rel="stylesheet" href="matliv.css" type="text/css" media="all" />
+</head>
+<body>
+<div id="menubar"> <!-- Menyen som er under headeren -->
+<ul>
+<li class='active'><a href='matliv.html'><span>Hjem</span></a></li>
+<li class='has-sub'><a href='#'><span>Kategorier</span></a>
+<ul>
+	<li><a href='kjott.html'><span>Kjøtt</span></a></li>
+	<li><a href='fisk.html'><span>Fisk</span></a></li>
+	<li><a href='pizza.html'><span>Pizza</span></a></li>
+	<li><a href='kinesisk.html'><span>Kinesisk</span></a></li>
+	<li><a href='takeaway.html'><span>Take away</span></a></li>
+	<li><a href='glutenfri.html'><span>Glutenfri</span></a></li>
+	<li class="last"><a href='vegetar.html'><span>Vegetar</span></a></li>
+</ul>
+   
+<li class='has-sub'><a href='#'><span>Restauranter</span></a>
+    <ul>
+		<li><a href='dollydimples.html'><span>Dolly Dimples</span></a></li>
+        <li><a href='egon.html'><span>Egon</span></a></li>
+		<li><a href='sjohuset.html'><span>Sjøhuset</span></a></li>
+		<li><a href='harveys.html'><span>Harveys</span></a></li>
+		<li><a href='amigos.html'><span>Amigos</span></a></li>
+        <li class='last'><a href='motherindia.html'><span>Mother India</span></a></li>
+    </ul>
+</li>
+<li class='has-sub'><a href='#'><span>Om oss</span></a>
+    <ul>
+        <li><a href='hvemervi.html'><span>Hvem er vi</span></a></li>
+        <li class='last'><a href='kontakt.html'><span>Kontakt oss</span></a></li>
+   </ul>
+   </li>
+		<li class='active'><a href='anbefalinger.html'><span>Anbefalinger</span></a></li>
+		<li class='active'><a href='registrering.html'><span>Registrering</span></a></li>
+		<li class='sokemotor'><span><form name="cse" id="searchbox_demo" action="http://www.google.com/cse"> <input type="hidden" name="cref" value="" /> <input type="hidden" name="ie" value="utf-8" />
+<input type="hidden" name="hl" value="" /> <input name="q" type="text" size="25" /> <input type="submit" name="sa" value="Søk" />
+</form> <script type="text/javascript" src="https://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang="></script></span></li>
+   </ul>
+
+</li>
+
+</ul>
+
+
+</div>
+
+<div id="wrapper">	<!-- Holder alle div'ene på plass -->
+
+	
+
+		
+<div id="container"> <!-- Her ligger innholdet på siden. -->
+<div id="kontaktskjemaholder">
+		<h1> Kontakt oss  </h1>
+	
+		<p> Har du spørsmål til siden eller noe du vil ta opp med teamet? Fyll ut skjemaet nedenfor også vil vi ta kontakt så snart vi kan. </p>
+		
+		
+		
+<form name="matliv.html" method="post" action="matliv.php"> 
+<table width="450px">
+<tr>
+ <td valign="top">
+  <label for="first_name">Fornavn:</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top"">
+  <label for="last_name">Etternavn:</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="email">E-post adresse:</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="email" maxlength="80" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="telephone">Telefon: </label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="comments">Spørsmål/kommentarer:</label>
+ </td>
+ <td valign="top">
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ </td>
+</tr>
+<tr>
+ <td colspan="2" style="text-align:center">
+  <input type="submit" value="Submit">
+ </td>
+</tr>
+</table>
+</form>
+<div class="kategorilinjefiller">
+</div>
+</div>
+</div>
+</div>
+
+<div id="footer">
+<p> Team Iste | &copy; 2013 </p>
+		
+</div>
+
+	
+</body>
+</html>

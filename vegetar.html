@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<!--
+  Prosjekt
+  Navn: Team Iste
+  Rom: IS-107
+-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-1.8.1.js"></script>
+<script src="js/slideshow.js"></script>
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+hcb_user = {
+    comments_header : 'Kommentarer',
+    name_label : 'Navn',
+    content_label: 'Skriv inn kommentaren her!',
+    submit : 'Kommenter',
+    logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
+    admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
+    no_comments_msg: 'Ingen har kommentert enda, vær den første!',
+    add:'Legg til din kommentar.',
+    again: 'Post en ny kommentar',
+    rss:'<img src="images/rss.png" class="hcb-icon" alt="rss"/> ',
+    said:'sa:',
+    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'viser',
+    to:'til',
+    website_label:'Webside (ikke krevd)',
+    email_label:'email',
+    anonymous:'Anonym bruker',
+    mod_label:'(mod)',
+    subscribe:'Email meg med svar',
+    are_you_sure:'Er du sikker på at denne kommentaren er upassende?',
+    
+    reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> reply',
+    flag:'<img src="//www.htmlcommentbox.com/static/images/flag.png"/> flag',
+    like:'<img src="//www.htmlcommentbox.com/static/images/like.png"/> like',
+    
+    //dates
+    days_ago:'dager siden',
+    hours_ago:'timer siden',
+    minutes_ago:'minutter siden',
+    within_the_last_minute:'mindre enn et minutt siden',
+
+    msg_thankyou:'Takk for at du kommenterte!',
+    msg_approval:'(Denne kommentaren vises ikke før det er godkjent',
+    msg_approval_required:'Takk for at du kommenterte. En moderator vil se over kommentaren.',
+    
+    err_bad_html:'Kommentaren din inneholdt dårlig html.',
+    err_bad_email:'Vennligst skriv inn en gyldig email.',
+    err_too_frequent:'Du må vente et par sekunder mellom å poste kommentarer.',
+    err_comment_empty:'Kommentaren din ble ikke postet fordi den var tom!',
+    err_denied:'Kommentaren din ble ikke godkjent.',
+
+    //SETTINGS
+    MAX_CHARS: 2048,
+    PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
+    RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
+};
+</script>
+<!-- done customizing labels of htmlcommentbox.com -->
+<title>Matliv i Kristiansand</title>
+<link rel="stylesheet" href="matliv.css" type="text/css" media="all" />
+</head>
+<body>
+<div id="menubar"> <!-- Menyen som er under headeren -->
+<ul>
+<li class='active'><a href='matliv.html'><span>Hjem</span></a></li>
+<li class='has-sub'><a href='#'><span>Kategorier</span></a>
+<ul>
+	<li><a href='kjott.html'><span>Kjøtt</span></a></li>
+	<li><a href='fisk.html'><span>Fisk</span></a></li>
+	<li><a href='pizza.html'><span>Pizza</span></a></li>
+	<li><a href='takeaway.html'><span>Take away</span></a></li>
+	<li><a href='glutenfri.html'><span>Glutenfri</span></a></li>
+	<li class="last"><a href='vegetar.html'><span>Vegetar</span></a></li>
+</ul>
+   
+<li class='has-sub'><a href='#'><span>Restauranter</span></a>
+    <ul>
+		<li><a href='dollydimples.html'><span>Dolly Dimples</span></a></li>
+        <li><a href='egon.html'><span>Egon</span></a></li>
+		<li><a href='sjohuset.html'><span>Sjøhuset</span></a></li>
+		<li><a href='harveys.html'><span>Harveys</span></a></li>
+		<li><a href='amigos.html'><span>Amigos</span></a></li>
+        <li class='last'><a href='motherindia.html'><span>Mother India</span></a></li>
+    </ul>
+</li>
+<li class='has-sub'><a href='#'><span>Om oss</span></a>
+    <ul>
+        <li><a href='hvemervi.html'><span>Hvem er vi</span></a></li>
+        <li class='last'><a href='kontakt.html'><span>Kontakt oss</span></a></li>
+   </ul>
+   </li>
+		<li class='active'><a href='anbefalinger.html'><span>Anbefalinger</span></a></li>
+		<li class='active'><a href='registrering.html'><span>Registrering</span></a></li>
+		<li class='sokemotor'><span><form name="cse" id="searchbox_demo" action="http://www.google.com/cse"> <input type="hidden" name="cref" value="" /> <input type="hidden" name="ie" value="utf-8" />
+<input type="hidden" name="hl" value="" /> <input name="q" type="text" size="25" /> <input type="submit" name="sa" value="Søk" />
+</form> <script type="text/javascript" src="https://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang="></script></span></li>
+   </ul>
+
+</li>
+
+</ul>
+
+
+</div>
+
+<div id="wrapper">	<!-- Holder alle div'ene på plass -->
+
+	
+
+		
+<div id="container"> <!-- Her ligger innholdet på siden. -->
+
+<div class="tekstboksh1">
+<h1>Matliv i Kristiansand - Vegetar</h1>
+</div>
+<div class="kategorilinje">
+<a href="dollydimples.html"><img src="images/restauranter/kategoridolly.jpg"></a>
+<a href="dollydimples.html"><h4> Dolly Dimple's </h4></a> <p> En resturant for hele familien, denne resturanten server pizza av alle slag. <br> Fra kjøtt til vegetar topping og glutenfri pizza finner du det meste på menyen. </p> 
+</div>
+<div class="kategorilinje">
+<a href="amigos.html"><img src="images/restauranter/kategoriamigos.jpg"></a>
+<a href="amigos.html"><h4> Amigos </h4></a> <p> Som en av byens mest populære og ekstraordinære restauranter serverer Amigos det meste man kan ønske seg fra det meksikanske kjøkkenet.<br> Her kan du få noe så enkelt som taco og pils, eller biff og vin. </p> 
+</div>
+<div class="kategorilinje">
+<a href="motherindia.html"><img src="images/restauranter/kategorimotherindia.jpg"></a>
+<a href="motherindia.html"><h4> Mother India </h4></a> <p> Som en koselig liten restaurant er Mother India ett lett valg for den sultne.<br> Dekorert i fine indiske farger vil du få en mat fra restauranten som er kåret til Norges beste indiske kjøkken. </p> 
+</div>
+<div class="kategorilinje">
+<a href="harveys.html"><img src="images/restauranter/kategoriharveys.jpg"></a>
+<a href="harveys.html"><h4> Harvey's </h4></a> <p> Med 3 etasjer og 28 HD-tver er Harveys Kristiansands definitivt beste sportsbar.<br> I tillegg til bar serverer de gode gammeldagse amerikanske burgere, inkludert deres 100% hjemmelagde burger. </p> 
+</div>
+<div class="kategorilinje">
+<a href="egon.html"><img src="images/restauranter/kategoriegon.jpg"></a>
+<a href="egon.html"><h4> Egon </h4></a> <p> Etter åpning av dørene i 2000 har Egon fort vokst opp til en av byens beste restauranter.<br> Etter en oppussing i 2009 har de nå plass til 250 gjester med ute og inneplasser. </p> 
+</div>
+<div class="kategorilinje">
+<a href="sjohuset.html"><img src="images/restauranter/kategorisjohuset.jpg"></a>
+<a href="sjohuset.html"><h4> Sjøhuset </h4></a> <p> Fra 1981 og frem til i dag har Sjøhuset servert kvalitetsmat til Sørlandet. Her får du fersk sjømat rett fra havet.<br> Med plass til nærmere 300 er det ingen tvil om at det blir stemning. </p> 
+</div>
+</div>
+</div>
+<div id="footer">
+<p> Team Iste | &copy; 2013 </p>
+		
+</div>
+
+	
+</body>
+</html>

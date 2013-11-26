@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<!--
+  Prosjekt
+  Navn: Team Iste
+  Rom: IS-107
+-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-1.8.1.js"></script>
+<script src="js/slideshow.js"></script>
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+hcb_user = {
+    comments_header : 'Kommentarer',
+    name_label : 'Navn',
+    content_label: 'Skriv inn kommentaren her!',
+    submit : 'Kommenter',
+    logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
+    admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
+    no_comments_msg: 'Ingen har kommentert enda, vær den første!',
+    add:'Legg til din kommentar.',
+    again: 'Post en ny kommentar',
+    rss:'<img src="images/rss.png" class="hcb-icon" alt="rss"/> ',
+    said:'sa:',
+    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'viser',
+    to:'til',
+    website_label:'Webside (ikke krevd)',
+    email_label:'email',
+    anonymous:'Anonym bruker',
+    mod_label:'(mod)',
+    subscribe:'Email meg med svar',
+    are_you_sure:'Er du sikker på at denne kommentaren er upassende?',
+    
+    reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> reply',
+    flag:'<img src="//www.htmlcommentbox.com/static/images/flag.png"/> flag',
+    like:'<img src="//www.htmlcommentbox.com/static/images/like.png"/> like',
+    
+    //dates
+    days_ago:'dager siden',
+    hours_ago:'timer siden',
+    minutes_ago:'minutter siden',
+    within_the_last_minute:'mindre enn et minutt siden',
+
+    msg_thankyou:'Takk for at du kommenterte!',
+    msg_approval:'(Denne kommentaren vises ikke før det er godkjent',
+    msg_approval_required:'Takk for at du kommenterte. En moderator vil se over kommentaren.',
+    
+    err_bad_html:'Kommentaren din inneholdt dårlig html.',
+    err_bad_email:'Vennligst skriv inn en gyldig email.',
+    err_too_frequent:'Du må vente et par sekunder mellom å poste kommentarer.',
+    err_comment_empty:'Kommentaren din ble ikke postet fordi den var tom!',
+    err_denied:'Kommentaren din ble ikke godkjent.',
+
+    //SETTINGS
+    MAX_CHARS: 2048,
+    PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
+    RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
+};
+</script>
+<!-- done customizing labels of htmlcommentbox.com -->
+<title>Matliv i Kristiansand</title>
+<link rel="stylesheet" href="matliv.css" type="text/css" media="all" />
+</head>
+<body>
+<div id="menubar"> <!-- Menyen som er under headeren -->
+<ul>
+<li class='active'><a href='matliv.html'><span>Hjem</span></a></li>
+<li class='has-sub'><a href='#'><span>Kategorier</span></a>
+<ul>
+	<li><a href='kjott.html'><span>Kjøtt</span></a></li>
+	<li><a href='fisk.html'><span>Fisk</span></a></li>
+	<li><a href='pizza.html'><span>Pizza</span></a></li>
+	<li><a href='takeaway.html'><span>Take away</span></a></li>
+	<li><a href='glutenfri.html'><span>Glutenfri</span></a></li>
+	<li class="last"><a href='vegetar.html'><span>Vegetar</span></a></li>
+</ul>
+   
+<li class='has-sub'><a href='#'><span>Restauranter</span></a>
+    <ul>
+		<li><a href='dollydimples.html'><span>Dolly Dimples</span></a></li>
+        <li><a href='egon.html'><span>Egon</span></a></li>
+		<li><a href='sjohuset.html'><span>Sjøhuset</span></a></li>
+		<li><a href='harveys.html'><span>Harveys</span></a></li>
+		<li><a href='amigos.html'><span>Amigos</span></a></li>
+        <li class='last'><a href='motherindia.html'><span>Mother India</span></a></li>
+    </ul>
+</li>
+<li class='has-sub'><a href='#'><span>Om oss</span></a>
+    <ul>
+        <li><a href='hvemervi.html'><span>Hvem er vi</span></a></li>
+        <li class='last'><a href='kontakt.html'><span>Kontakt oss</span></a></li>
+   </ul>
+   </li>
+		<li class='active'><a href='anbefalinger.html'><span>Anbefalinger</span></a></li>
+		<li class='active'><a href='registrering.html'><span>Registrering</span></a></li>
+		<li class='sokemotor'><span><form name="cse" id="searchbox_demo" action="http://www.google.com/cse"> <input type="hidden" name="cref" value="" /> <input type="hidden" name="ie" value="utf-8" />
+<input type="hidden" name="hl" value="" /> <input name="q" type="text" size="25" /> <input type="submit" name="sa" value="Søk" />
+</form> <script type="text/javascript" src="https://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang="></script></span></li>
+   </ul>
+
+</li>
+
+</ul>
+
+
+</div>
+
+<div id="wrapper">	<!-- Holder alle div'ene på plass -->
+
+	
+
+		
+<div id="container"> <!-- Her ligger innholdet på siden. -->
+<div id="googleMap">
+<iframe width="250" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sj%C3%B8huset,+Kristiansand,+Norway&amp;aq=0&amp;oq=sj%C3%B8huset&amp;sll=37.0625,-95.677068&amp;sspn=40.59616,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=h&amp;ll=58.142377,7.999163&amp;spn=0.001416,0.002671&amp;z=17&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Sj%C3%B8huset,+Kristiansand,+Norway&amp;aq=0&amp;oq=sj%C3%B8huset&amp;sll=37.0625,-95.677068&amp;sspn=40.59616,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;t=h&amp;ll=58.142377,7.999163&amp;spn=0.001416,0.002671&amp;z=17" style="color:#0000FF;text-align:left">View Larger Map</a></small></div>
+<div class="restaurantbilder">
+<div class="fadein">
+  <img src="images/restauranter/sjohuset1.jpg">
+  <img src="images/restauranter/sjohuset2test.jpg">
+</div>
+</div>
+<div class="tekstboksh1">
+<h1> Vi anbefaler  </h1>
+</div>
+<div class="tekstboks">
+<p> Sjøhuset Resturant. På byens østre havn, i det som opprinnelig er et saltlager fra 1892, holder i dag Restaurant Sjøhuset til. Fra starten av i 1981 har Sjøhuset vært en av de ledende restaurantene i Kristiansand, og er i dag et naturlig valg for så vel representasjon som private anledninger.
+<br><br>
+Restauranten har ca 120 sitteplasser, og sommerstid åpner vi uteserveringen på dems egen brygge. </p>		
+<br><br>
+Åpningstider:
+<br><br>
+Alle dager fra kl 15.00<br>
+Søndag : Stengt<br>
+
+</div>
+
+<div id="comment">
+<!-- begin htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=(hcb_user.PAGE || ""+window.location), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end htmlcommentbox.com -->
+
+</div>
+
+
+
+</div>
+</div>
+<div id="footer">
+<p> Team Iste | &copy; 2013 </p>
+		
+</div>
+
+	
+</body>
+</html>
