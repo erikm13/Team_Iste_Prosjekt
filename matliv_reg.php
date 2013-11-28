@@ -1,4 +1,6 @@
   <?php
+  
+  // Kilde til mail PHP: http://www.freecontactform.com/email_form.php
  header('Content-Type: text/html;charset=UTF-8');
 if(isset($_POST['email'])) {
      
