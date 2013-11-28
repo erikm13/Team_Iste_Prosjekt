@@ -15,6 +15,7 @@ if(isset($_POST['email'])) {
         echo "Se under for feil.<br /><br />";
         echo $error."<br /><br />";
         echo "Vennligst gå tilbake og fiks feil i skjema.<br /><br />";
+		echo "<a href=kontakt.html>Klikk her for å komme tilbake.</a>";
         die();
     }
      
