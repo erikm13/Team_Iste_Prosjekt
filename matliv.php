@@ -38,12 +38,17 @@ if(isset($_POST['email'])) {
   if(!preg_match($email_exp,$email_from)) {
     $error_message .= 'E-post adresse er ugyldig.<br />';
   }
-    $string_exp = "/^[A-Za-z .'-]+$/";
+    $string_exp = "/^[A-Åa-å .'-]+$/";
   if(!preg_match($string_exp,$first_name)) {
     $error_message .= 'Fornavn er ugyldig.<br />';
   }
+	$string_exp = "/^[A-Åa-å .'-]+$/";
   if(!preg_match($string_exp,$last_name)) {
     $error_message .= 'Etternavn er ugyldig.<br />';
+  }
+	$string_exp = "/^[0-9]+$/";
+  if(strlen($telephone) < 8) {
+    $error_message .= 'Telefonnummeret ditt er ugyldig, det krevest minst 8 siffer.<br />';
   }
   if(strlen($comments) < 2) {
     $error_message .= 'Kommentaren din er ugyldig, du må ha mer enn 2 tegn.<br />';
