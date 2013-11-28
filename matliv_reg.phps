@@ -61,8 +61,8 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
     }
      
-    $email_message .= "Fornavn: ".clean_string($company_name)."\n";
-    $email_message .= "Etternavn: ".clean_string($contact_name)."\n";
+    $email_message .= "Bedriftsnavn: ".clean_string($first_name)."\n";
+    $email_message .= "Kontaktperson: ".clean_string($last_name)."\n";
     $email_message .= "E-post: ".clean_string($email_from)."\n";
     $email_message .= "Telefon: ".clean_string($telephone)."\n";
     $email_message .= "Kommentar: ".clean_string($comments)."\n";
@@ -82,3 +82,6 @@ Takk for at du brukte vårt kontaktskjema, vi kommer tilbake til deg så snart v
 <?php
 }
 ?> 
+<br>
+<br>
+<a href="registrering.html">Klikk her for å komme tilbake.</a>
