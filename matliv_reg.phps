@@ -32,16 +32,21 @@ if(isset($_POST['email'])) {
     $comments = $_POST['comments']; // påkrevd
      
     $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+    $email_exp = '/^[A-Åa-å0-9._%-]+@[A-Åa-å0-9.-]+\.[A-Åa-å]{2,4}$/';
   if(!preg_match($email_exp,$email_from)) {
     $error_message .= 'E-post adresse er ugyldig.<br />';
   }
-    $string_exp = "/^[A-Za-z .'-]+$/";
+    $string_exp = "/^[A-Åa-å .'-]+$/";
   if(!preg_match($string_exp,$first_name)) {
     $error_message .= 'Bedriftsnavnet er ugyldig.<br />';
   }
+	$string_exp = "/^[A-Åa-å .'-]+$/";
   if(!preg_match($string_exp,$last_name)) {
     $error_message .= 'Kontaktpersonens navn er ugyldig.<br />';
+  }
+  $string_exp = "/^[0-9]+$/";
+  if(strlen($telephone) < 8) {
+    $error_message .= 'Telefonnummeret ditt er ugyldig, det kreves minst 8 siffer.<br />';
   }
   if(strlen($comments) < 2) {
     $error_message .= 'Kommentaren din er ugyldig, du må ha mer enn 2 tegn.<br />';
